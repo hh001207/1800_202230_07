@@ -7,6 +7,9 @@
 ## General Info
 This browser based web application to ...
 *Hi My name is Brett I'm excited about this project because I won't be bored as often
+Hi my name is Max.
+## Hey this is Mike messing with things so it breaks! Yay!
+
 	
 ## Technologies
 Technologies used for this project:
@@ -42,4 +45,6 @@ Firebase hosting files:
 Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
+
+
 
