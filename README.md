@@ -7,6 +7,7 @@
 ## General Info
 This browser based web application to ...
 Hi my name is Max.
+## Hey this is Mike messing with things so it breaks! Yay!
 	
 ## Technologies
 Technologies used for this project:
@@ -42,5 +43,3 @@ Firebase hosting files:
 Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
-
-## Hey this is Mike messing with things so it breaks! Yay!
