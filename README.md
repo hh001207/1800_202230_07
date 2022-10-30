@@ -6,8 +6,8 @@
 
 ## General Info
 This browser based web application to ...
-*Hi My name is Brett I'm excited about this project because I won't be bored as often
-Hi my name is Max.
+## Hi My name is Brett I'm excited about this project because I won't be bored as often
+## Hi my name is Max.
 ## Hey this is Mike messing with things so it breaks! Yay!
 
 	
@@ -16,7 +16,7 @@ Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap 
-* ...
+* Firebase
 	
 ## Content
 Content of the project folder:
@@ -24,17 +24,21 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
+├── index.html               # landing HTML file, this is what users see when you 
+├── nav.html                 # html for the nav bar
+├── footer.html              # html for the footer
+come to url
 └── README.md
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # 
+    /Swordlogo.jpg           # App logo 
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /scripts.js              # scripts for the project
+    /skeleton.js             # for adding links to different pages
 ├── styles                   # Folder for styles
-    /blah.css                # 
+    /style.css               # main css for the app 
 
 Firebase hosting files: 
 ├── .firebaserc...
@@ -45,8 +49,4 @@ Firebase hosting files:
 Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
-
-# BOP I did a thing giv error plz again again
-# BOP I did a thing giv error
-# ok i add stuff
 
