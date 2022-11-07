@@ -96,15 +96,6 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "magic",
-        name: "Magic", 
-        level: "easy-hard",
-        cost: "$0-$1100",
-        details: "Magic: The Gathering is a card game in which wizards cast spells, summon creatures, and exploit magic objects to defeat their opponents.",
-        last_updated: firebase.firestore.FieldValue.serverTimestamp()
-    });
-
-    hobbiesRef.add({
         code: "origami",
         name: "Origami", 
         level: "easy-hard",
@@ -114,7 +105,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "rubix cube",
+        code: "rubix-cube",
         name: "Rubix-Cube", 
         level: "med-hard",
         cost: "$4-$50",
@@ -132,7 +123,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "table tennis",
+        code: "table-tennis",
         name: "Table-Tennis", 
         level: "easy-hard",
         cost: "$20-$50",
