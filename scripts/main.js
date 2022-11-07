@@ -114,7 +114,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "rubix-cube",
+        code: "rubix cube",
         name: "Rubix-Cube", 
         level: "med-hard",
         cost: "$4-$50",
@@ -132,7 +132,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "table-tennis",
+        code: "table tennis",
         name: "Table-Tennis", 
         level: "easy-hard",
         cost: "$20-$50",
