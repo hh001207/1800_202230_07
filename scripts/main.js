@@ -25,9 +25,7 @@ function writeHobbies() {
 
     hobbiesRef.add({
         code: "Archery",
-        name: "Archery", 
-        level: "hard",
-        cost: "$150-$500",
+        name: "Archery",  
         details: "Archery is the sport, practice, or skill of using a bow to shoot arrows.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -35,8 +33,6 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "basketball",
         name: "Basketball", 
-        level: "easy",
-        cost: "$20-$100",
         details: "Basketball is a game played between two teams of five players each on a rectangular court. Each team tries to score by tossing the ball through the opponent’s goal, a horizontal hoop and net called a basket.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -44,8 +40,6 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "coincollecting",
         name: "Coin_COllecting", 
-        level: "easy",
-        cost: "$0-$2000",
         details: "Coin collecting is the collecting of coins or other forms of minted legal tender",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -62,17 +56,13 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "gym",
         name: "Gym", 
-        level: "easy-hard",
-        cost: "$16-$170",
         details: "A gym is a place where people go to train and exercise, but also to unwind, socialize, and recharge.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
         code: "Kayak",
-        name: "Kayak", 
-        level: "easy-hard",
-        cost: "$200-$1,000",
+        name: "Kayaking and Paddle Boarding", 
         details: "Kayaking is a fun activity that involves moving through water in a small water vessel with the aid of a double-bladed paddle.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -89,8 +79,6 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "magic",
         name: "Magic", 
-        level: "easy-hard",
-        cost: "$0-$1100",
         details: "Magic: The Gathering is a card game in which wizards cast spells, summon creatures, and exploit magic objects to defeat their opponents.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -98,8 +86,6 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "origami",
         name: "Origami", 
-        level: "easy-hard",
-        cost: "$9-$50",
         details: "the Japanese art of folding paper into decorative shapes and figures.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -107,8 +93,6 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "rubix-cube",
         name: "Rubix-Cube", 
-        level: "med-hard",
-        cost: "$4-$50",
         details: "The Rubik's Cube is a 3-D combination puzzle.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -116,8 +100,6 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "suduko",
         name: "Suduko", 
-        level: "easy-hard",
-        cost: "$4-$50",
         details: "sudoku consists of a 9 × 9 grid with numbers appearing in some of the squares.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -125,8 +107,6 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "table-tennis",
         name: "Table-Tennis", 
-        level: "easy-hard",
-        cost: "$20-$50",
         details: "It's like pong but in real life.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
