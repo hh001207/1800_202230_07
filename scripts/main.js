@@ -6,6 +6,7 @@ function insertName() {
             console.log(user.uid); //print the uid in the browser console
             console.log(user.displayName); //print the user name in the browser console
             user_Name = user.displayName;
+            
 
             //method #1:  insert with html only
             //document.getElementById("name-goes-here").innerText = user_Name;    //using javascript
@@ -217,3 +218,4 @@ function buildHobbyPoints() {
         rubixCube:
     })
 }
+
