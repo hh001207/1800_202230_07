@@ -123,7 +123,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "martial-arts",
+        code: "martialArts",
         name: "Martial Arts", 
         details: "Learn disciplin and self defense skills while strengthening your body",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
@@ -137,7 +137,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "board-games",
+        code: "boardGames",
         name: "Table-top Games", 
         details: "Board games, card games, party games, there's a lot more out there than just Monopoly!",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
@@ -203,19 +203,19 @@ function displayCards(collection) {
 
 displayCards("hobbies");
 
-function buildHobbyPoints() {
-    var user = db.collection("users")
-    user.add({
-        Archery: "0",
-        basketball: "0",
-        coincollecting: "0",
-        coding: "0",
-        gym: "0",
-        Kayak: "0",
-        crochet: "0",
-        magic: "0",
-        origami: "0",
-        rubixCube:
-    })
-}
+// function buildHobbyPoints() {
+//     var user = db.collection("users")
+//     user.add({
+//         Archery: "0",
+//         basketball: "0",
+//         coincollecting: "0",
+//         coding: "0",
+//         gym: "0",
+//         Kayak: "0",
+//         crochet: "0",
+//         magic: "0",
+//         origami: "0",
+//         rubixCube:
+//     })
+// }
 
