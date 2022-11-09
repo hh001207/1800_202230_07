@@ -87,7 +87,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "rubix-cube",
+        code: "rubixCube",
         name: "Rubix-Cube", 
         details: "The Rubik's Cube is a 3-D combination puzzle you try to solve as fast as possible (or at all) by memorizing patterns",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
@@ -101,7 +101,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "table-tennis",
+        code: "tableTennis",
         name: "Table-Tennis", 
         details: "It's like tennis but smaller or pong but in real life.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
@@ -157,7 +157,7 @@ function writeHobbies() {
     });
 
     hobbiesRef.add({
-        code: "magic-tricks",
+        code: "magicTricks",
         name: "Magic Tricks", 
         details: "Amaze your friends and family with sneaky slight of hand and misdirection.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
@@ -201,3 +201,19 @@ function displayCards(collection) {
 }
 
 displayCards("hobbies");
+
+function buildHobbyPoints() {
+    var user = db.collection("users")
+    user.add({
+        Archery: "0",
+        basketball: "0",
+        coincollecting: "0",
+        coding: "0",
+        gym: "0",
+        Kayak: "0",
+        crochet: "0",
+        magic: "0",
+        origami: "0",
+        rubixCube:
+    })
+}
