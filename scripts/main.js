@@ -26,9 +26,7 @@ function writeHobbies() {
 
     hobbiesRef.add({
         code: "Archery",
-        name: "Archery", 
-        level: "hard",
-        cost: "$150-$500",
+        name: "Archery",  
         details: "Archery is the sport, practice, or skill of using a bow to shoot arrows.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -36,62 +34,48 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "basketball",
         name: "Basketball", 
-        level: "easy",
-        cost: "$20-$100",
         details: "Basketball is a game played between two teams of five players each on a rectangular court. Each team tries to score by tossing the ball through the opponent’s goal, a horizontal hoop and net called a basket.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
         code: "coincollecting",
-        name: "Coin_COllecting", 
-        level: "easy",
-        cost: "$0-$2000",
-        details: "Coin collecting is the collecting of coins or other forms of minted legal tender",
+        name: "Collecting", 
+        details: "Collecting, such as coin collecting, is all about finding rare sets of things just because they're neat",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
-        code: "dancing",
-        name: "Dancing", 
-        level: "easy-hard",
-        cost: "$50-$85",
-        details: "dance is the movement of the body in a rhythmic way.",
+        code: "coding",
+        name: "Coding", 
+        details: "Coding is creating computer programs, either as a fun project or for practical uses",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
         code: "gym",
         name: "Gym", 
-        level: "easy-hard",
-        cost: "$16-$170",
         details: "A gym is a place where people go to train and exercise, but also to unwind, socialize, and recharge.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
         code: "Kayak",
-        name: "Kayak", 
-        level: "easy-hard",
-        cost: "$200-$1,000",
-        details: "Kayaking is a fun activity that involves moving through water in a small water vessel with the aid of a double-bladed paddle.",
+        name: "Kayaking and Paddle Boarding", 
+        details: "Kayaking is a fun activity that involves moving through water in a small water vessel with the aid of a double-bladed paddle. Paddle boarding is similar, but standing up!",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
-        code: "knitting",
-        name: "Knitting", 
-        level: "easy-hard",
-        cost: "$20-$150",
-        details: "production of fabric by employing a continuous yarn or set of yarns to form a series of interlocking loops.",
+        code: "crochet",
+        name: "Crochet", 
+        details: "Similar to knitting, making clothes and other fabric products by looping yarn together.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
         code: "magic",
         name: "Magic", 
-        level: "easy-hard",
-        cost: "$0-$1100",
         details: "Magic: The Gathering is a card game in which wizards cast spells, summon creatures, and exploit magic objects to defeat their opponents.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -99,8 +83,6 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "origami",
         name: "Origami", 
-        level: "easy-hard",
-        cost: "$9-$50",
         details: "the Japanese art of folding paper into decorative shapes and figures.",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -108,27 +90,84 @@ function writeHobbies() {
     hobbiesRef.add({
         code: "rubix-cube",
         name: "Rubix-Cube", 
-        level: "med-hard",
-        cost: "$4-$50",
-        details: "The Rubik's Cube is a 3-D combination puzzle.",
+        details: "The Rubik's Cube is a 3-D combination puzzle you try to solve as fast as possible (or at all) by memorizing patterns",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
         code: "suduko",
         name: "Suduko", 
-        level: "easy-hard",
-        cost: "$4-$50",
-        details: "sudoku consists of a 9 × 9 grid with numbers appearing in some of the squares.",
+        details: "Sudoku is a pen and paper or digital number puzzle game. Find what number belongs in the gaps!",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     hobbiesRef.add({
         code: "table-tennis",
         name: "Table-Tennis", 
-        level: "easy-hard",
-        cost: "$20-$50",
-        details: "It's like pong but in real life.",
+        details: "It's like tennis but smaller or pong but in real life.",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "guitar",
+        name: "Musical Instruments", 
+        details: "Learning an instrument is great way to stimulate your mind and recreate your favorite songs.",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "bouldering",
+        name: "Bouldering", 
+        details: "Indoor or Outdoor rock climbing / bouldering is a rewarding test of strength and coordination. Climbing gyms set up fake rocks with paths to challenge you.",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "martial-arts",
+        name: "Martial Arts", 
+        details: "Learn disciplin and self defense skills while strengthening your body",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "photography",
+        name: "Photography", 
+        details: "Take photos of the most beautiful things you can find or document the world around you",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "board-games",
+        name: "Table-top Games", 
+        details: "Board games, card games, party games, there's a lot more out there than just Monopoly!",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "soccer",
+        name: "Soccer", 
+        details: "Use anything but your hands in this team-based sport famous around the globe.",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "hiking",
+        name: "Hiking", 
+        details: "Get out and see the world by foot, reaching new heights of achievement and elevation.",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "magic-tricks",
+        name: "Magic Tricks", 
+        details: "Amaze your friends and family with sneaky slight of hand and misdirection.",
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    hobbiesRef.add({
+        code: "woodworking",
+        name: "Woodworking", 
+        details: "Get your hands busy and make something from scratch out of wood",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()
     });
 }
