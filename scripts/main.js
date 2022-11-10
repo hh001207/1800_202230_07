@@ -203,19 +203,30 @@ function displayCards(collection) {
 
 displayCards("hobbies");
 
-// function buildHobbyPoints() {
-//     var user = db.collection("users")
-//     user.add({
-//         Archery: "0",
-//         basketball: "0",
-//         coincollecting: "0",
-//         coding: "0",
-//         gym: "0",
-//         Kayak: "0",
-//         crochet: "0",
-//         magic: "0",
-//         origami: "0",
-//         rubixCube:
-//     })
-// }
+function buildHobbyPoints() {
+    var user = db.collection("users")
+    user.add({
+        Archery: "0",
+        basketball: "0",
+        coincollecting: "0",
+        coding: "0",
+        gym: "0",
+        Kayak: "0",
+        crochet: "0",
+        magic: "0",
+        origami: "0",
+        rubixCube:"0",
+        suduko: "0",
+        tableTennis: "0",
+        guitar: "0",
+        bouldering: "0",
+        martialArts: "0",
+        photography: "0",
+        boardGames: "0",
+        soccer: "0",
+        hiking: "0",
+        magicTricks: "0",
+        woodworking: "0",
+    })
+}
 
