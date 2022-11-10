@@ -34,49 +34,31 @@
 
 
     <!-- Your HTML Layout go here -->
-    <template id="activitiesTemplate">
-      <div class="container bg-light p-5">
-              <a href="resultp.html" class="name-title btn btn-primary bg-warning btn-lg" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><span id="activity1-goes-here"></span></a>
-          </div>
-      </div>
-  </template>
 
-  <template id="detailsTemplate">
-              <div class="name-details modal-body">
-                  <span id="details-goes-here"></span>
-              </div>
-  </template>
-
+  <template id="hobbiesCardTemplate">
+    <div class="card py-2 mx-2" style="width: 18rem;">
+        <img class="card-image card-img-top" src=" ..." alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+            <a class="btn btn-warning card-href">Get Details</a>
+        </div>
+    </div>
+</template>
 
     <!--Your navbar goes here-->
     <nav id="navbarPlaceholder"></nav>
 
     <!--Body stuff goes below here-->
-    <div class="container-fluid bg-light text-dark p-5">
-          <h1 class="display-4">Result</h1>
-          <br>
-          <div class="d-grid gap-2">
-              <a href="resultp.html" class="btn btn-primary bg-warning btn-lg" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><div id="activities-go-here"></div></a>
-              <a href="result.html" class="btn btn-primary bg-warning btn-lg" role="button">Reroll</a>
+    <div class="container">
+      <h1>Results</h1>
+      <!-- Here is container for cards  -->
+      <div class="container">
+          <div id="hobbies-go-here" class="row row-cols-auto">
           </div>
       </div>
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Description</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <span id="details1-goes-here">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
 
       
 
@@ -95,7 +77,6 @@
     <!--<script src="./scripts/script.js"></script>-->
     <script src="/scripts/firebaseAPI_BBY07.js"></script>
     <script src="/scripts/skeleton.js"></script>
-    <script src="/scripts/main.js"></script>
     <script src="/scripts/result.js"></script>
 
 

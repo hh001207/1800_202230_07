@@ -1,62 +1,31 @@
-function readName(collection) {
-  let activityTemplate = document.getElementById("activitiesTemplate");
+function resultCards(collection) {
+  let cardTemplate = document.getElementById("hobbiesCardTemplate");
 
-  db.collection(collection).get().limit(3)
+
+  db.collection(collection).limit(6).get()
       .then(snap => {
+          //var i = 1;  //if you want to use commented out section
+          snap.forEach(doc => { //iterate thru each doc
+              var title = doc.data().name; // get value of the "name" key
+              var details = doc.data().details; // get value of the "details" key
+              var hobbiesID = doc.data().code; //get unique ID to each hobbies to be used for fetching right image
+              let newcard = cardTemplate.content.cloneNode(true);
 
-          snap.forEach(doc => {
-              var title = doc.data().name;
-              let newName = activityTemplate.content.cloneNode(true);
-              console.log(title);
-              newName.querySelector('.name-title').innerHTML = title;
+              //update title and text and image
+              newcard.querySelector('.card-title').innerHTML = title;
+              newcard.querySelector('.card-text').innerHTML = details;
+              newcard.querySelector('.card-image').src = `./images/${hobbiesID}.jpg`; //Example: NV01.jpg
 
-              document.getElementById("activities-go-here").appendChild(newName);
+              //give unique ids to all elements for future use
+              // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
+              // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
+              // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+
+              //attach to gallery
+              document.getElementById(collection + "-go-here").appendChild(newcard);
+              //i++;   //if you want to use commented out section
           })
       })
 }
 
-readName("hobbies");
-
-function readName1() {
-  db.collection("hobbies").doc("AskeatjY22nRm0HENh5b")                                               //name of the collection and documents should matach excatly with what you have in Firestore
-    .onSnapshot(doc => {                                                               //arrow notation
-         console.log("current document data: " + doc.data());                          //.data() returns data object
-          document.getElementById("activity1-goes-here").innerHTML = doc.data().code;
-          document.getElementById("details1-goes-here").innerHTML = doc.data().details;     //using javascript to display the data on the right place
-         //Here are other ways to access key:value data fields
-         //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
-         //$("#quote-goes-here").text(tuesdayDoc.data()["quote"]);                                    //using json object indexing
-  })
-}
-
-
-
-readName1();        //calling the function      
-
-function readName2() {
-  db.collection("hobbies").doc("DQaUgKNE0CMR2cjf1Kav")                                                 //name of the collection and documents should matach excatly with what you have in Firestore
-    .onSnapshot(doc => {                                                               //arrow notation
-         console.log("current document data: " + doc.data());                          //.data() returns data object
-         document.getElementById("activity2-goes-here").innerHTML = doc.data().code; 
-         document.getElementById("details2-goes-here").innerHTML = doc.data().details;     //using javascript to display the data on the right place
-         //Here are other ways to access key:value data fields
-         //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
-         //$("#quote-goes-here").text(tuesdayDoc.data()["quote"]);                                    //using json object indexing
-  })
-}
-
-readName2(); 
-
-function readName3() {
-  db.collection("hobbies").doc("DxqkljsXpG13kz22653n")                                                 //name of the collection and documents should matach excatly with what you have in Firestore
-    .onSnapshot(doc => {                                                               //arrow notation
-         console.log("current document data: " + doc.data());                          //.data() returns data object
-         document.getElementById("activity3-goes-here").innerHTML = doc.data().code;
-         document.getElementById("details3-goes-here").innerHTML = doc.data().details;  //using javascript to display the data on the right place
-         //Here are other ways to access key:value data fields
-         //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
-         //$("#quote-goes-here").text(tuesdayDoc.data()["quote"]);                                    //using json object indexing
-  })
-}
-
-readName3(); 
+resultCards("hobbies");
