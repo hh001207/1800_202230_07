@@ -34,30 +34,56 @@
 
 
     <!-- Your HTML Layout go here -->
-    <!-- Templates for general use, not displayed -->
-    <template id="hobbiesCardTemplate">
-        <div class="card py-2 mx-2" style="width: 18rem;">
-            <img class="card-image card-img-top" src=" ..." alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a class="btn btn-warning card-href">Details</a>
-            </div>
-        </div>
-    </template>
 
     <!--Your navbar goes here-->
     <nav id="navbarPlaceholder"></nav>
 
     <!--Body stuff goes below here-->
     <div class="container">
-        <h1>List of Activities</h1>
-        <!-- Here is container for cards  -->
-        <div class="container">
-            <div id="hobbies-go-here" class="row row-cols-auto">
+        <br>
+        <h1>Feedback from: <span id="name-goes-here"></span></h1>
+        <br>
+        <form>
+            <div class="form-group">
+                <label for="activity">Activity *Drop down list goes here*</label>
+                <input type="text" class="form-control" id="activity" placeholder="Select an activity">
+            </div><br>
+            <div class="form-group">
+                <label for="enjoyment">How did you like the activity?</label>
+                <select class="form-control" id="enjoyment">
+                    <option></option>
+                    <option>I loved it</option>
+                    <option>it was ok</option>
+                    <option>meh</option>
+                    <option>I hated it</option>
+                </select>
+                <br>
+                <div class="form-group">
+                    <label for="recommend">Would you recommend this app to your friends?</label>
+                    <select class="form-control" id="recommend">
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+
+                    </select>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="description">What are some features you like to see in the future?</label>
+                    <textarea class="form-control" id="description" rows="3"></textarea>
+                </div>
+                <br>
+
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-lg btn-warning pull-right"
+                        onclick="writeFeedback()">Submit</button>
+                </div>
             </div>
-        </div>
+        </form>
+
+
     </div>
 
     <!--footer goes here-->
@@ -73,6 +99,7 @@
     <script src="/scripts/firebaseAPI_BBY07.js"></script>
     <script src="/scripts/skeleton.js"></script>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/feedback.js"></script>
 
 
 </body>

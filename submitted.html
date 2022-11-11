@@ -34,30 +34,19 @@
 
 
     <!-- Your HTML Layout go here -->
-    <!-- Templates for general use, not displayed -->
-    <template id="hobbiesCardTemplate">
-        <div class="card py-2 mx-2" style="width: 18rem;">
-            <img class="card-image card-img-top" src=" ..." alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a class="btn btn-warning card-href">Details</a>
-            </div>
-        </div>
-    </template>
+
 
     <!--Your navbar goes here-->
     <nav id="navbarPlaceholder"></nav>
 
     <!--Body stuff goes below here-->
-    <div class="container">
-        <h1>List of Activities</h1>
-        <!-- Here is container for cards  -->
-        <div class="container">
-            <div id="hobbies-go-here" class="row row-cols-auto">
-            </div>
+    <div class="container-fluid bg-light text-dark p-5">
+        <div class="container bg-light p-5">
+            <h1 class="display-4">Thanks for your feedback, <span id="name-goes-here" class="d-flex justify-content-center"></span></h1>
+            <hr>
+            <p class="d-flex justify-content-center">Click the button below to go home.</p>
         </div>
+        <a class="btn btn-warning d-flex justify-content-center" href="/main.html" role="button">Home</a>
     </div>
 
     <!--footer goes here-->

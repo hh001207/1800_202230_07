@@ -203,6 +203,8 @@ function displayCards(collection) {
 
 displayCards("hobbies");
 
+
+
 function buildHobbyPoints() {
     var user = db.collection("users")
     user.add({
