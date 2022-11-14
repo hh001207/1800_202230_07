@@ -14,27 +14,27 @@ function writeFeedback() {
 
     console.log(Activity, Enjoyment, Recommend, Description);
 
-    // firebase.auth().onAuthStateChanged(user => {
-    //     if (user) {
-    //         var currentUser = db.collection("users").doc(user.uid)
-    //         var userID = user.uid;
-    //         //get the document for current user.
-    //         currentUser.get()
-    //             .then(userDoc => {
-    //                 var userEmail = userDoc.data().email;
-    //                 db.collection("feedback").add({
-    //                     userID: userID,
-    //                     activity: Activity,
-    //                     enjoyment: Enjoyment,
-    //                     recommend: Recommend,
-    //                     description: Description,
-    //                     timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    //                 }).then(() => {
-    //                     window.location.href = "submitted.html"; //new line added
-    //                 })
-    //             })
-    //     } else {
-    //         // No user is signed in.
-    //     }
-    // });
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            var currentUser = db.collection("users").doc(user.uid)
+            var userID = user.uid;
+            //get the document for current user.
+            currentUser.get()
+                .then(userDoc => {
+                    var userEmail = userDoc.data().email;
+                    db.collection("feedback").add({
+                        userID: userID,
+                        activity: Activity,
+                        enjoyment: Enjoyment,
+                        recommend: Recommend,
+                        description: Description,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                    }).then(() => {
+                        window.location.href = "submitted.html"; //new line added
+                    })
+                })
+        } else {
+            // No user is signed in.
+        }
+    });
 }
