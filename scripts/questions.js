@@ -22,30 +22,32 @@ for (var i = 0, length = radios.length; i < length; i++) {
 function addPoints(question) {
   var inp = getButton();
   console.log(inp);
-  // switch(question) {
-  //   case 1:
-  //     db.collection("users").doc(currentUser.id).update({
-  //       if (inp > 0) {
+  switch(question) {
+    case 1:
+        if (inp > 0) {
+          var inc = db.collection("users").doc(currentUser).get("Archery") + inp;
+          console.log("the new value for Archery is" + inc);
+          db.collection("users").doc(currentUser.id).update({
+            Archery: inc
+          })
+        }
+    case 2:
 
-  //       }
-  //     })
-  //   case 2:
+    case 3:
 
-  //   case 3:
-
-  //   case 4:
+    case 4:
   
-  //   case 5:
+    case 5:
 
-  //   case 6:
+    case 6:
 
-  //   case 7:
+    case 7:
 
-  //   case 8:
+    case 8:
 
-  //   case 9:
+    case 9:
 
-  //   case 10:
+    case 10:
 
-  // }
+  }
 }
