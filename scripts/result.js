@@ -1,15 +1,29 @@
+let change = 3;
+
+function changelim() {
+
+  resultCards("hobbies");
+  change += 3 ;
+
+}
+
 function resultCards(collection) {
+  
+
+  // let change = 3;
   let cardTemplate = document.getElementById("hobbiesCardTemplate");
 
 
-  db.collection(collection).limit(6).get()
+  db.collection(collection).limit(change).get()
       .then(snap => {
+        console.log(snap.size);
           //var i = 1;  //if you want to use commented out section
           snap.forEach(doc => { //iterate thru each doc
               var title = doc.data().name; // get value of the "name" key
               var details = doc.data().details; // get value of the "details" key
               var hobbiesID = doc.data().code; //get unique ID to each hobbies to be used for fetching right image
               let newcard = cardTemplate.content.cloneNode(true);
+              console.log(title);
 
               //update title and text and image
               newcard.querySelector('.card-title').innerHTML = title;
@@ -28,4 +42,3 @@ function resultCards(collection) {
       })
 }
 
-resultCards("hobbies");
