@@ -42,3 +42,4 @@ function resultCards(collection) {
       })
 }
 
+resultCards("hobbies");

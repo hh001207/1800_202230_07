@@ -1,0 +1,24 @@
+This is just for brainstorming questions in a way that will be documented in github
+
+1st draft, better wording required. just trying to cover all of the tags, which are:
+Expensive // Cheap (3)
+Outside // Inside (1)
+Active // Inactive (2)
+Confident // Shy (6)
+Self Improvement // just for fun (8)
+Creative // Straight forward (5)
+Complex // Simple (4)
+Create // Experiences (7)
+Teamwork // solo (9)
+Competitive // noncomp (10)
+
+ How much do you prefer the outdoors to staying inside?*
+ How much would you prefer your hobbies to be active over inactive?*
+ Do you have a large budget for your hobbies?*
+ Do you want something very mentally challenging?
+ How much would you prefer something creative over a more straight forward activity?
+ How confident are you being infront of others?*
+ Is having a physical result of an activity an important to you?*
+ Are you wanting something that leads to self improvement?*
+ How much do you prefer working alone vs in a group?*
+How Competitive are you?*
