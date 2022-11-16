@@ -1,9 +1,10 @@
 let change = 3;
 
 function changelim() {
-  resultCards("hobbies");
   change += 3;
+  resultCards("hobbies");
 }
+
 function resultCards(collection) {
   // let change = 3;
   document.getElementById(collection + "-go-here").innerHTML="";
