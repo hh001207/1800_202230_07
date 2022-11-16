@@ -1,8 +1,11 @@
-let change = 3;
+let change = 4;
 
 function changelim() {
-  change += 3;
+  change += 4;
   resultCards("hobbies");
+  if (change > 5) {
+    change = 4;
+  }
 }
 
 function resultCards(collection) {

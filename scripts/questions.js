@@ -1,14 +1,16 @@
-function getButton(question) {
+
+//Gets the result of the radio button
+function getButton() {
 
 var radios = document.getElementsByName("inlineRadioOptions");
 
 for (var i = 0, length = radios.length; i < length; i++) {
   if (radios[i].checked) {
     // do whatever you want with the checked radio
-    console.log()
-    q1, radios[i].value;
-    break; }
+    return radios[i].value - 3;
   }
+  }
+  return 0;
 }
 
 // function countQ() {
@@ -18,9 +20,17 @@ for (var i = 0, length = radios.length; i < length; i++) {
 // }
 
 function addPoints(question) {
+  var inp = getButton();
+  console.log(inp);
   switch(question) {
     case 1:
-
+        if (inp > 0) {
+          var inc = db.collection("users").doc(currentUser).get("Archery") + inp;
+          console.log("the new value for Archery is" + inc);
+          db.collection("users").doc(currentUser.id).update({
+            Archery: inc
+          })
+        }
     case 2:
 
     case 3:
