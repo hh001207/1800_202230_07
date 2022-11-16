@@ -25,11 +25,10 @@ function addPoints(question) {
   switch(question) {
     case 1:
         if (inp > 0) {
-          var inc = db.collection("users").doc(currentUser).get("Archery") + inp;
-          console.log("the new value for Archery is" + inc);
           db.collection("users").doc(currentUser.id).update({
-            Archery: inc
-          })
+            Archery: firebase.firestore.FieldValue.increment(inp)
+        })
+          
         }
     case 2:
 
