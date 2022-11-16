@@ -29,3 +29,4 @@ function resultCards(collection) {
 }
 
 resultCards("hobbies");
+loadSkeleton();
