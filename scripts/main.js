@@ -4,11 +4,12 @@ firebase.auth().onAuthStateChanged(user => {
         currentUser = db.collection("users").doc(user.uid);   //global
         console.log(currentUser);
         buildHobbyPoints(); //gives the user a list of all the hobbies to add points to
-
+        loadSkeleton();
     } else {
         // No user is signed in.
         console.log("No user is signed in");
-        window.location.href = "login.html";
+        //alert("Please log in");
+        window.location.href = "index.html";
     }
 });
 
