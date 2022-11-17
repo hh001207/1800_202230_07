@@ -26,10 +26,10 @@ How Competitive are you?*
 
 Each hobby and associated tags
 
-Rubix cube % Cheap Inside Inactive Shy Straight Complex solo
+rubixCube % Cheap Inside Inactive Shy Straight Complex solo
 Archery % Expensive Outside Active Improvement Straight Experiences solo
-Coding % Cheap Inside Inactive Shy Complex Create solo
-Gym % Inside Active Confident Improvement Simple Experiences Straight
+coding % Cheap Inside Inactive Shy Complex Create solo
+gym % Inside Active Confident Improvement Simple Experiences Straight
 Guitar / Uke % Inside Inactive Creative Complex Experiences Solo noncomp
 bouldering % Active inside shy Improvement straight simple experiences
 mtg % Inside Inactive Confident Fun Creative Complex Comp
