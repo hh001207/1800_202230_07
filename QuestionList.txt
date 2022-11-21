@@ -40,7 +40,7 @@ Table top gaming % Inside Inactive Confident Fun Creative Experiences Teamwork
 BasketBall % Cheap Inside Active Straight Experiences comp teamwork
 Soccer % Cheap outside Active Straight Experiences comp teamwork
 suduko % cheap inside inactive straight uncomp solo shy
-Hiking % outside active shy improvement Experiences noncomp
+Hiking % outside active shy straight improvement Experiences noncomp
 magic tricks % Inside Inactive Confident Creative solo noncomp experiences
 kayak / paddleboarding % expensive outside Active improvement experiences noncomp shy
 Woodworking % expensive improvement creative complex create solo noncomp
