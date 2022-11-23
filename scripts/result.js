@@ -2,7 +2,54 @@ let change = 4;
 
 let highest;
 
-// if (user)
+var currentUser;
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        currentUser = db.collection("users").doc(user.uid);   //global
+        console.log(currentUser);
+    } else {
+        // No user is signed in.
+        console.log("No user is signed in");
+        //alert("Please log in");
+        window.location.href = "index.html";
+    }
+});
+
+function insertName() {
+  firebase.auth().onAuthStateChanged((user) => {
+    // Check if a user is signed in:
+    if (user) {
+      // Do something for the currently logged-in user here:
+      console.log(user.uid); //print the uid in the browser console
+      console.log(user.displayName); //print the user name in the browser console
+      user_Name = user.displayName;
+      
+
+      //method #1:  insert with html only
+      //document.getElementById("name-goes-here").innerText = user_Name;    //using javascript
+      //method #2:  insert using jquery
+      $("#name-goes-here").text(user_Name); //using jquery
+    } else {
+      // No user is signed in.
+    }
+  });
+}
+insertName(); //run the function
+
+function getnumber() {
+  firebase.auth().onAuthStateChanged((user) => {
+    
+  })
+}
+
+// function gethigh() {
+//   firebase.auth().onAuthStateChanged((user) => {
+//     for (let i = 0; i  < user.data().size; i++){
+      
+//     }
+//   });
+// }
+
 
 
 function changelim() {
@@ -40,42 +87,9 @@ function resultCards(collection) {
               document.getElementById(collection + "-go-here").appendChild(newcard);
               //i++;   //if you want to use commented out section
 
-          })
-          readDetails(); 
+          }) 
       })
 }
 
 resultCards("hobbies");
 loadSkeleton();
-
-
-function readDetails() {
-  db.collection("hobbies").limit(change).get()                                                     //name of the collection and documents should matach
-    .then(snap => {
-        //var i = 1;  //if you want to use commented out section
-        snap.forEach(doc => { //iterate thru each doc
-            var title = doc.data().name; // get value of the "name" key
-            var details = doc.data().details; // get value of the "details" key
-            document.getElementById("name-goes-here").innerHTML = title;
-            document.getElementById("details-goes-here").innerHTML = details;
-            console.log(title);
-            console.log(details);
-            //update title and text and image
-            //i++;   //if you want to use commented out section
-
-    // .onSnapshot(somedoc => {             
-      
-    //   //arrow notation
-    //      console.log("current document data: " + somedoc.data());                          //.data() returns data object
-    //      document.getElementById("quote-goes-here").innerHTML = somedoc.data().quote;      //using javascript to display the data on the right place
-         
-    //      //Here are other ways to access key:value data fields
-    //      //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
-    //      //$("#quote-goes-here").text(tuesdayDoc.data()["quote"]);                                    //using json object indexing
-      })
-  })
-}
-
-readDetails();
-
-       //calling the function
