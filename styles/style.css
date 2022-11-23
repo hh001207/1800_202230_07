@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Syne+Mono&display=swap');
+/*-------------------------------------
+ * customize material design icon sizes 
+ *-------------------------------------
+ */
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+/*
+* --------------------------------------------
+* These are some styles that I am customizing 
+* to over-ride the default bootstrap ones
+*---------------------------------------------
+*/
+#navbarPlaceholder{
+    background-color: #FF8200;
+}
+
+.bg-info {
+    background-color: #FFC100 !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #0A0903;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', Syne Mono;
+    font-size: 2.25rem;
+}
+
+.btn-warning {
+    color: #FFEAAE;
+    font-size: 150%;
+    background-color: #FF8200;
+    border-color: #FFC100;
+    border-width: thick
+}
+
+.btn-secondary {
+    color: #FFEAAE;
+    font-size: 150%;
+    background-color: #FF8200;
+    border-color: #FFC100;
+    border-width: thick
+}
+
+#pp {
+    color: #FFEAAE;
+}
+
+.btn-info {
+    color: #FFEAAE;
+    font-size: 150%;
+    background-color: #FF8200;
+    border-color: #FFC100;
+    border-width: thick
+}
+
+body {
+    background-color: #FFEAAE;
+}
+
+img {
+    border-radius: 1.2em;
+    border: 15px black double;
+}
+
+#main {
+    background: url(https://media.giphy.com/media/SExu1NjbmGALSv5Bm2/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#login{
+    background-color: #FF8200;
+}
+
+#orange{
+    background: #FF8200;
+}
