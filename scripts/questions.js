@@ -5,7 +5,7 @@ function getButton() {
   for (var i = 0, length = radios.length; i < length; i++) {
     if (radios[i].checked) {
       // do whatever you want with the checked radio
-      return radios[i].value - 3;
+      return radios[i].value;
     }
   }
   return 0;
@@ -19,270 +19,141 @@ function getButton() {
 
 function addPoints(question) {
   var inp = getButton();
+  console.log(question)
   console.log(inp);
   switch (question) {
     case 1:
-      if (inp > 0) {
-        db.collection("users")
-          .doc(currentUser.id)
-          .update({
-            Archery: firebase.firestore.FieldValue.increment(inp),
-            photography: firebase.firestore.FieldValue.increment(inp),
-            soccer: firebase.firestore.FieldValue.increment(inp),
-            hiking: firebase.firestore.FieldValue.increment(inp),
-            Kayak: firebase.firestore.FieldValue.increment(inp),
-          });
+      if (inp > 3) {
+        window.localStorage.removeItem(3);
+        window.localStorage.removeItem(5);
+        window.localStorage.removeItem(7);
+        window.localStorage.removeItem(15);
       }
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          rubixCube: firebase.firestore.FieldValue.increment(inp),
-          coding: firebase.firestore.FieldValue.increment(inp),
-          gym: firebase.firestore.FieldValue.increment(inp),
-          guitar: firebase.firestore.FieldValue.increment(inp),
-          bouldering: firebase.firestore.FieldValue.increment(inp),
-          magic: firebase.firestore.FieldValue.increment(inp),
-          martialArts: firebase.firestore.FieldValue.increment(inp),
-          crochet: firebase.firestore.FieldValue.increment(inp),
-          boardGames: firebase.firestore.FieldValue.increment(inp),
-          basketball: firebase.firestore.FieldValue.increment(inp),
-          suduko: firebase.firestore.FieldValue.increment(inp),
-          magicTricks: firebase.firestore.FieldValue.increment(inp),
-          coincollecting: firebase.firestore.FieldValue.increment(inp),
-          tableTennis: firebase.firestore.FieldValue.increment(inp),
-          origami: firebase.firestore.FieldValue.increment(inp),
-        })
+      if (inp < 3) {
+        window.localStorage.removeItem(11);
+        window.localStorage.removeItem(10);
+        window.localStorage.removeItem(16);
       }
+      console.log("q1 points added");
+      
       break;
     case 2:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          Archery: firebase.firestore.FieldValue.increment(inp),
-          gym: firebase.firestore.FieldValue.increment(inp),
-          bouldering: firebase.firestore.FieldValue.increment(inp),
-          martialArts: firebase.firestore.FieldValue.increment(inp),
-          basketball: firebase.firestore.FieldValue.increment(inp),
-          soccer: firebase.firestore.FieldValue.increment(inp),
-          hiking: firebase.firestore.FieldValue.increment(inp),
-          Kayak: firebase.firestore.FieldValue.increment(inp),
-          tableTennis: firebase.firestore.FieldValue.increment(inp),
-      })}
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          rubixCube: firebase.firestore.FieldValue.increment(inp),
-          coding: firebase.firestore.FieldValue.increment(inp),
-          guitar: firebase.firestore.FieldValue.increment(inp),
-          magic: firebase.firestore.FieldValue.increment(inp),
-          crochet: firebase.firestore.FieldValue.increment(inp),
-          boardGames: firebase.firestore.FieldValue.increment(inp),
-          suduko: firebase.firestore.FieldValue.increment(inp),
-          magicTricks: firebase.firestore.FieldValue.increment(inp),
-          coincollecting: firebase.firestore.FieldValue.increment(inp),
-          origami: firebase.firestore.FieldValue.increment(inp),
-      })}
+      if (inp > 3) {
+        window.localStorage.removeItem(7);
+        window.localStorage.removeItem(5);
+        
+      }
+      if (inp < 3) {
+        window.localStorage.removeItem(9);
+        window.localStorage.removeItem(14);
+        window.localStorage.removeItem(2);
+        window.localStorage.removeItem(19);
+      }
+      
+           
       break;
 
     case 3:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          Archery: firebase.firestore.FieldValue.increment(inp),
-          woodworking: firebase.firestore.FieldValue.increment(inp),
-          coincollecting: firebase.firestore.FieldValue.increment(inp),
-          Kayak: firebase.firestore.FieldValue.increment(inp),
-      })}
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          rubixCube: firebase.firestore.FieldValue.increment(inp),
-          coding: firebase.firestore.FieldValue.increment(inp),
-          basketball: firebase.firestore.FieldValue.increment(inp),
-          soccer: firebase.firestore.FieldValue.increment(inp),
-          suduko: firebase.firestore.FieldValue.increment(inp),
-          tableTennis: firebase.firestore.FieldValue.increment(inp),
-      })}
+      if (inp < 2) { 
+        window.localStorage.removeItem(6);
+        window.localStorage.removeItem(20);
+        window.localStorage.removeItem(11);
+        window.localStorage.removeItem(1);
+      }
+
+        
+      
       break;
 
     case 4:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          gym: firebase.firestore.FieldValue.increment(inp),
-          magic: firebase.firestore.FieldValue.increment(inp),
-          martialArts: firebase.firestore.FieldValue.increment(inp),
-          boardGames: firebase.firestore.FieldValue.increment(inp),
-
-      })}
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          rubixCube: firebase.firestore.FieldValue.increment(inp),
-          coding: firebase.firestore.FieldValue.increment(inp),
-          bouldering: firebase.firestore.FieldValue.increment(inp),
-          crochet: firebase.firestore.FieldValue.increment(inp),
-          photography: firebase.firestore.FieldValue.increment(inp),
-          suduko: firebase.firestore.FieldValue.increment(inp),
-          hiking: firebase.firestore.FieldValue.increment(inp),
-          coincollecting: firebase.firestore.FieldValue.increment(inp),
-          origami: firebase.firestore.FieldValue.increment(inp),
-        })
+      if (inp < 3) {
+        window.localStorage.removeItem(8);
+        window.localStorage.removeItem(13);
+        window.localStorage.removeItem(14);
+        window.localStorage.removeItem(9);
+        window.localStorage.removeItem(16);
       }
+      
       break;
     case 5:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          Archery: firebase.firestore.FieldValue.increment(inp),
-          gym: firebase.firestore.FieldValue.increment(inp),
-          bouldering: firebase.firestore.FieldValue.increment(inp),
-          martialArts: firebase.firestore.FieldValue.increment(inp),
-          hiking: firebase.firestore.FieldValue.increment(inp),
-          Kayak: firebase.firestore.FieldValue.increment(inp),
-          woodworking: firebase.firestore.FieldValue.increment(inp),
-          tableTennis: firebase.firestore.FieldValue.increment(inp),
-        })
+      if (inp > 3) { 
+        window.localStorage.removeItem(3);
+        window.localStorage.removeItem(6);
       }
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          magic: firebase.firestore.FieldValue.increment(inp),
-          photography: firebase.firestore.FieldValue.increment(inp),
-          boardGames: firebase.firestore.FieldValue.increment(inp),
-
-        })
+      if (inp < 3) {
+        window.localStorage.removeItem(4);
+        window.localStorage.removeItem(9);
+        window.localStorage.removeItem(14);
       }
+        
       break;
 
     case 6:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          guitar: firebase.firestore.FieldValue.increment(inp),
-          magic: firebase.firestore.FieldValue.increment(inp),
-          crochet: firebase.firestore.FieldValue.increment(inp),
-          photography: firebase.firestore.FieldValue.increment(inp),
-          boardGames: firebase.firestore.FieldValue.increment(inp),
-          magicTricks: firebase.firestore.FieldValue.increment(inp),
-          woodworking: firebase.firestore.FieldValue.increment(inp),
-
-        })
+      if (inp > 3) {
+        window.localStorage.removeItem(18);
+        window.localStorage.removeItem(17);
+        window.localStorage.removeItem(19);
       }
-      if (inp < 0){
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          rubixCube: firebase.firestore.FieldValue.increment(inp),
-          bouldering: firebase.firestore.FieldValue.increment(inp),
-          martialArts: firebase.firestore.FieldValue.increment(inp),
-          basketball: firebase.firestore.FieldValue.increment(inp),
-          soccer: firebase.firestore.FieldValue.increment(inp),
-          suduko: firebase.firestore.FieldValue.increment(inp),
-          hiking: firebase.firestore.FieldValue.increment(inp),
-          coincollecting: firebase.firestore.FieldValue.increment(inp),
-
-        })
+      if (inp < 3) {
+        window.localStorage.removeItem(7);
+        window.localStorage.removeItem(12);
+        window.localStorage.removeItem(20);
       }
       break;
 
     case 7:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          coding: firebase.firestore.FieldValue.increment(inp),
-          crochet: firebase.firestore.FieldValue.increment(inp),
-          photography: firebase.firestore.FieldValue.increment(inp),
-          woodworking: firebase.firestore.FieldValue.increment(inp),
-          coincollecting: firebase.firestore.FieldValue.increment(inp),
-          origami: firebase.firestore.FieldValue.increment(inp),
-        })
-      }
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          Archery: firebase.firestore.FieldValue.increment(inp),
-          gym: firebase.firestore.FieldValue.increment(inp),
-          guitar: firebase.firestore.FieldValue.increment(inp),
-          bouldering: firebase.firestore.FieldValue.increment(inp),
-          martialArts: firebase.firestore.FieldValue.increment(inp),
-          boardGames: firebase.firestore.FieldValue.increment(inp),
-          basketball: firebase.firestore.FieldValue.increment(inp),
-          soccer: firebase.firestore.FieldValue.increment(inp),
-          hiking: firebase.firestore.FieldValue.increment(inp),
-          magicTricks: firebase.firestore.FieldValue.increment(inp),
-          Kayak: firebase.firestore.FieldValue.increment(inp),
-          tableTennis: firebase.firestore.FieldValue.increment(inp),
-        })
+      if (inp > 3) {
+        window.localStorage.removeItem(3);
+        window.localStorage.removeItem(10);
+        window.localStorage.removeItem(17);
+        window.localStorage.removeItem(11);
       }
       break;
 
     case 8:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          basketball: firebase.firestore.FieldValue.increment(inp),
-          magic: firebase.firestore.FieldValue.increment(inp),
-          soccer: firebase.firestore.FieldValue.increment(inp),
-          tableTennis: firebase.firestore.FieldValue.increment(inp),
-        })
+      if (inp > 3) {
+        window.localStorage.removeItem(7);
+        window.localStorage.removeItem(18);
+        window.localStorage.removeItem(15);
+        window.localStorage.removeItem(5);
       }
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          guitar: firebase.firestore.FieldValue.increment(inp),
-          crochet: firebase.firestore.FieldValue.increment(inp),
-          photography: firebase.firestore.FieldValue.increment(inp),
-          suduko: firebase.firestore.FieldValue.increment(inp),
-          hiking: firebase.firestore.FieldValue.increment(inp),
-          magicTricks: firebase.firestore.FieldValue.increment(inp),
-          Kayak: firebase.firestore.FieldValue.increment(inp),
-          woodworking: firebase.firestore.FieldValue.increment(inp),
-          origami: firebase.firestore.FieldValue.increment(inp),
-        })
+      if (inp < 3) {
+        window.localStorage.removeItem(2);
+        window.localStorage.removeItem(3);
+        window.localStorage.removeItem(19);
       }
       break;
 
     case 9:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          rubixCube: firebase.firestore.FieldValue.increment(inp),
-          Archery: firebase.firestore.FieldValue.increment(inp),
-          coding: firebase.firestore.FieldValue.increment(inp),
-          guitar: firebase.firestore.FieldValue.increment(inp),
-          crochet: firebase.firestore.FieldValue.increment(inp),
-          photography: firebase.firestore.FieldValue.increment(inp),
-          suduko: firebase.firestore.FieldValue.increment(inp),
-          magicTricks: firebase.firestore.FieldValue.increment(inp),
-          woodworking: firebase.firestore.FieldValue.increment(inp),
-          coincollecting: firebase.firestore.FieldValue.increment(inp),
-          origami: firebase.firestore.FieldValue.increment(inp),
-
-        })
+      if (inp > 3) {
+        window.localStorage.removeItem(2);
+        window.localStorage.removeItem(14);
+        window.localStorage.removeItem(3);
       }
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          boardGames: firebase.firestore.FieldValue.increment(inp),
-          basketball: firebase.firestore.FieldValue.increment(inp),
-          soccer: firebase.firestore.FieldValue.increment(inp),
-
-        })
+      if (inp < 3) {
+        window.localStorage.removeItem(1);
+        window.localStorage.removeItem(18);
+        window.localStorage.removeItem(17);
+        window.localStorage.removeItem(13);
       }
       break;
 
     case 10:
-      if (inp > 0) {
-        db.collection("users").doc(currentUser.id).update({
-          rubixCube: firebase.firestore.FieldValue.increment(inp),
-          coding: firebase.firestore.FieldValue.increment(inp),
-          guitar: firebase.firestore.FieldValue.increment(inp),
-          magic: firebase.firestore.FieldValue.increment(inp),
-          woodworking: firebase.firestore.FieldValue.increment(inp),
-          tableTennis: firebase.firestore.FieldValue.increment(inp),
-        })
-      }
-      if (inp < 0) {
-        inp = inp * -1;
-        db.collection("users").doc(currentUser.id).update({
-          gym: firebase.firestore.FieldValue.increment(inp),
-          bouldering: firebase.firestore.FieldValue.increment(inp),
-          martialArts: firebase.firestore.FieldValue.increment(inp),
+      if (inp > 3) {
+        window.localStorage.removeItem(15);
+        window.localStorage.removeItem(10);
+        window.localStorage.removeItem(14);
 
-        })
+      }
+      if (inp < 3) {
+        window.localStorage.removeItem(17);
+        window.localStorage.removeItem(18);
+        window.localStorage.removeItem(12);
+        window.localStorage.removeItem(5);
       }
       break;
+      
   }
 }
+
+

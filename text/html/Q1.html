@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="style.css" >
 </head>
 
-<body>
+<body onload="console.log(localStorage.getItem(1))">
   <!-- Your HTML Layout go here -->
 
   <!--Your navbar goes here-->
@@ -71,9 +71,9 @@
     <hr>
     <hr>
     <!-- <input class="btn btn-primary" type="submit" value="Submit" href="Q2.html"> -->
-    <form onsubmit="addPoints(1);" action="/text/html/Q2.html">
-      <input class="btn btn-warning" type="submit" value="Submit" >
-  </form>
+
+      <a class="btn btn-warning" onclick="addPoints(1);" href="/text/html/Q2.html">Submit</a>
+
   </div>
 
 
@@ -90,6 +90,7 @@
   <script src="/scripts/skeleton.js"></script>
   <script src="/scripts/main.js"></script>
   <script src="/scripts/questions.js"></script>
+  
 </body>
 
 </html>

@@ -3,7 +3,7 @@ firebase.auth().onAuthStateChanged(user => {
     if (user) {
         currentUser = db.collection("users").doc(user.uid);   //global
         console.log(currentUser);
-        buildHobbyPoints(); //gives the user a list of all the hobbies to add points to
+        //buildHobbyPoints(); //gives the user a list of all the hobbies to add points to
         loadSkeleton();
     } else {
         // No user is signed in.
@@ -43,6 +43,9 @@ function writeHobbies() {
   hobbiesRef.add({
     code: "Archery",
     name: "Archery",
+    outdoor: 10,
+    active: 7,
+    size: 3,
     details:
       "Archery is the sport, practice, or skill of using a bow to shoot arrows.",
     last_updated: firebase.firestore.FieldValue.serverTimestamp(),
@@ -258,27 +261,54 @@ function logout() {
 
 
 function buildHobbyPoints() {
-    db.collection("users").doc(currentUser.id).update({
-            Archery: 0,
-            basketball: 0,
-            coincollecting: 0,
-            coding: 0,
-            gym: 0,
-            Kayak: 0,
-            crochet: 0,
-            magic: 0,
-            origami: 0,
-            rubixCube:0,
-            suduko: 0,
-            tableTennis: 0,
-            guitar: 0,
-            bouldering: 0,
-            martialArts: 0,
-            photography: 0,
-            boardGames: 0,
-            soccer: 0,
-            hiking: 0,
-            magicTricks: 0,
-            woodworking: 0,
-        });
+
+window.localStorage.setItem(1, "Archery");
+window.localStorage.setItem(2, "basketball");
+window.localStorage.setItem(3, "boardGames");
+window.localStorage.setItem(4, "bouldering");
+window.localStorage.setItem(5, "coding");
+window.localStorage.setItem(6, "coincollecting");
+window.localStorage.setItem(7, "crochet");
+window.localStorage.setItem(8, "guitar");
+window.localStorage.setItem(9, "gym");
+window.localStorage.setItem(10, "hiking");
+window.localStorage.setItem(11, "Kayak");
+window.localStorage.setItem(12, "magic");
+window.localStorage.setItem(13, "magicTricks");
+window.localStorage.setItem(14, "martialArts");
+window.localStorage.setItem(15, "origami");
+window.localStorage.setItem(16, "photography");
+window.localStorage.setItem(17, "rubixCube");
+window.localStorage.setItem(18, "suduko");
+window.localStorage.setItem(19, "tableTennis");
+window.localStorage.setItem(20, "woodworking");
+
+  // console.log("clear attempt");
+  //   db.collection("users").doc(currentUser.id).update({
+  //           Archery: 0,
+  //           basketball: 0,
+  //           coincollecting: 0,
+  //           coding: 0,
+  //           gym: 0,
+  //           Kayak: 0,
+  //           crochet: 0,
+  //           magic: 0,
+  //           origami: 0,
+  //           rubixCube:0,
+  //           suduko: 0,
+  //           tableTennis: 0,
+  //           guitar: 0,
+  //           bouldering: 0,
+  //           martialArts: 0,
+  //           photography: 0,
+  //           boardGames: 0,
+  //           soccer: 0,
+  //           hiking: 0,
+  //           magicTricks: 0,
+  //           woodworking: 0,
+  //       }).then(()=>{
+  //         console.log("Hobbies have been set to 0")
+          window.location.href="/text/html/Q1.html";
+  //       })
+        
     };

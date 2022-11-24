@@ -47,3 +47,53 @@ Woodworking % expensive improvement creative complex create solo noncomp
 collecting % expensive inside inactive shy straight create solo 
 Table Tennis % Cheap inside active improvement  experiences comp complex
 Origami % Cheap inside inactive shy create solo noncomp
+
+_____________________________________________________
+
+With the new functionality of the system, I need to determine which 
+questions will remove which hobbies. + means remove if 4-5 and - means remove if 1-2
+
+outdoors?
++ boardGames
++ coding
++ crochet
+- kayak
+- Hiking
+
+active?
++ crochet
++ magic
+- gym
+- martialArts
+- BasketBall
+
+
+budget
++ Origami
++ suduko
+- collecting
+- Woodworking
+
+confidence
++ suduko
++ coding
+- Guitar
+- magicTricks
+
+self improvement
++ boardGames
++ collecting
+- gym
+- bouldering
+
+creative
++ suduko
++ gym
++ rubixCube
+- crochet
+- magic
+
+physical result
++ Archery
++ bouldering
+-
