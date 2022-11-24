@@ -1,9 +1,61 @@
 let change = 4;
 
+let highest;
+
+var currentUser;
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        currentUser = db.collection("users").doc(user.uid);   //global
+        console.log(currentUser);
+    } else {
+        // No user is signed in.
+        console.log("No user is signed in");
+        //alert("Please log in");
+        window.location.href = "index.html";
+    }
+});
+
+function insertName() {
+  firebase.auth().onAuthStateChanged((user) => {
+    // Check if a user is signed in:
+    if (user) {
+      // Do something for the currently logged-in user here:
+      console.log(user.uid); //print the uid in the browser console
+      console.log(user.displayName); //print the user name in the browser console
+      user_Name = user.displayName;
+      
+
+      //method #1:  insert with html only
+      //document.getElementById("name-goes-here").innerText = user_Name;    //using javascript
+      //method #2:  insert using jquery
+      $("#name-goes-here").text(user_Name); //using jquery
+    } else {
+      // No user is signed in.
+    }
+  });
+}
+insertName(); //run the function
+
+function getnumber() {
+  firebase.auth().onAuthStateChanged((user) => {
+    
+  })
+}
+
+// function gethigh() {
+//   firebase.auth().onAuthStateChanged((user) => {
+//     for (let i = 0; i  < user.data().size; i++){
+      
+//     }
+//   });
+// }
+
+
+
 function changelim() {
   change += 4;
   resultCards("hobbies");
-  if (change > 5) {
+  if (change > 4) {
     change = 4;
   }
 }
@@ -34,7 +86,8 @@ function resultCards(collection) {
               //attach to gallery
               document.getElementById(collection + "-go-here").appendChild(newcard);
               //i++;   //if you want to use commented out section
-          })
+
+          }) 
       })
 }
 
