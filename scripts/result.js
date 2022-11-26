@@ -97,6 +97,8 @@ function showleft() {
   for(i = 0; i < 21; i++) {
     if(localStorage.getItem(i) != null) {
       console.log(localStorage.getItem(i));
+      let hobb = localStorage.getItem(i)
+      resultsS(hobb);
     }
   }
 }
