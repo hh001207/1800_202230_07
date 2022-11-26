@@ -94,11 +94,28 @@ function resultCards(collection) {
 //resultCards("hobbies");
 
 function showleft() {
+  let x = localStorage.length;
+  console.log(x);
+  let max = 4;
+  if (x == 5 || x == 6 || x == 8 || x == 10){
   for(i = 0; i < 21; i++) {
     if(localStorage.getItem(i) != null) {
       console.log(localStorage.getItem(i));
       let hobb = localStorage.getItem(i)
+      if (max > 0){
       resultsS(hobb);
+      max--;}
+    }
+  }}
+  else {
+    for(i = 21; i > 1; i--) {
+      if(localStorage.getItem(i) != null) {
+        console.log(localStorage.getItem(i));
+        let hobb = localStorage.getItem(i)
+        if (max > 0) {
+        resultsS(hobb);
+        max--;}
+      }
     }
   }
 }
