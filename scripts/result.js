@@ -93,6 +93,15 @@ function resultCards(collection) {
 
 //resultCards("hobbies");
 
+function showleft() {
+  for(i = 0; i < 21; i++) {
+    if(localStorage.getItem(i) != null) {
+      console.log(localStorage.getItem(i));
+    }
+  }
+}
+showleft();
+
 loadSkeleton();
 
 //New system from localstorage
@@ -102,7 +111,7 @@ function resultsS(hob) {
   let cardTemplate = document.getElementById("hobbiesCardTemplate");
 
   var docRef = db.collection("hobbies").where("code", "==", hob);
-  docRef.get().then((docList) => {
+  docRef.limit(change).get().then((docList) => {
     docList.docs[0].ref.get().then((theThingIWant) => {
       var title = theThingIWant.data().name;
       var details = theThingIWant.data().details;
@@ -120,3 +129,5 @@ function resultsS(hob) {
     //var heck = docList.docs[0].get().then((print) => {})
   });
 }
+
+resultsS(localStorage);
