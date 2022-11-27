@@ -33,6 +33,7 @@ function addPoints(question) {
         window.localStorage.removeItem(11);
         window.localStorage.removeItem(10);
         window.localStorage.removeItem(16);
+
       }
       console.log("q1 points added");
 
@@ -41,6 +42,9 @@ function addPoints(question) {
       if (inp > 3) {
         window.localStorage.removeItem(7);
         window.localStorage.removeItem(5);
+        window.localStorage.removeItem(15);
+        window.localStorage.removeItem(17);
+        window.localStorage.removeItem(18);
       }
       if (inp < 3) {
         window.localStorage.removeItem(9);
@@ -75,6 +79,9 @@ function addPoints(question) {
       if (inp > 3) {
         window.localStorage.removeItem(3);
         window.localStorage.removeItem(6);
+        window.localStorage.removeItem(13);
+        window.localStorage.removeItem(12);
+
       }
       if (inp < 3) {
         window.localStorage.removeItem(4);
