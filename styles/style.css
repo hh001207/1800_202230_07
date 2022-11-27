@@ -26,7 +26,7 @@
 * to over-ride the default bootstrap ones
 *---------------------------------------------
 */
-#navbarPlaceholder{
+#navbarPlaceholder {
     background-color: #FF8200;
 }
 
@@ -86,10 +86,10 @@ img {
     background-size: 100%;
 }
 
-#login{
+#login {
     background-color: #FF8200;
 }
 
-#orange{
+#orange {
     background: #FF8200;
 }
