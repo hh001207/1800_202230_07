@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>My BCIT Project</title>
     <meta name="comp1800 template" content="My 1800 App">
@@ -23,23 +24,24 @@
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="/styles/style.css">
 </head>
+
 <body>
     <!-- Your HTML Layout go here -->
-<template id="hobbiesCardTemplate">
-    <div class="card py-2 mx-2" style="width: 18rem;">
-        <img class="card-image card-img-top" src=" ..." alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+    <template id="hobbiesCardTemplate">
+        <div class="card py-2 mx-2" style="width: 18rem;">
+            <img class="card-image card-img-top" src=" ..." alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 <!-- <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Get Details
                 </button> -->
+            </div>
         </div>
-    </div>
 
 
-</template>
+    </template>
 
 
 
@@ -49,19 +51,19 @@
     <nav id="navbarPlaceholder"></nav>
     <!--Body stuff goes below here-->
     <div class="container">
-    <h1><span id="name-goes-here"></span>'s Results</h1>
-    <!-- Here is container for cards  -->
-    <div class="container">
-        <div id="hobbies-go-here" class="row row-cols-auto">
-            <div id="name-goes-here"></div>
-            <div id="details-goes-here"></div>
+        <h1><span id="name-goes-here"></span>'s Results</h1>
+        <!-- Here is container for cards  -->
+        <div class="container">
+            <div id="hobbies-go-here" class="row row-cols-auto">
+                <!-- <div id="name-goes-here"></div> -->
+                <div id="details-goes-here"></div>
+            </div>
         </div>
-    </div>
         <div class="d-grid gap-2">
-        <br>
-            <button class="btn btn-warning" type="button" onclick="changelim()" >Reroll</button>
+            <br>
+            <button class="btn btn-warning" type="button" onclick="changelim()">Reroll</button>
+            <a class="btn btn-warning" href="/main.html">Done</a>
         </div>
-    
     </div>
     <!--footer goes here-->
     <nav id="footerPlaceholder"></nav>
@@ -73,4 +75,5 @@
     <script src="/scripts/skeleton.js"></script>
     <script src="/scripts/result.js"></script>
 </body>
+
 </html>
