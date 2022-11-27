@@ -47,13 +47,7 @@ function getnumber() {
 //   });
 // }
 
-function changelim() {
-  change += 4;
-  resultCards("hobbies");
-  if (change > 4) {
-    change = 4;
-  }
-}
+
 //old system coming from firebase
 
 
@@ -92,6 +86,98 @@ function resultCards(collection) {
 }
 
 //resultCards("hobbies");
+
+
+function buildHobbyPoints() {
+
+  window.localStorage.setItem(1, "Archery");
+  window.localStorage.setItem(2, "basketball");
+  window.localStorage.setItem(3, "boardGames");
+  window.localStorage.setItem(4, "bouldering");
+  window.localStorage.setItem(5, "coding");
+  window.localStorage.setItem(6, "coincollecting");
+  window.localStorage.setItem(7, "crochet");
+  window.localStorage.setItem(8, "guitar");
+  window.localStorage.setItem(9, "gym");
+  window.localStorage.setItem(10, "hiking");
+  window.localStorage.setItem(11, "Kayak");
+  window.localStorage.setItem(12, "magic");
+  window.localStorage.setItem(13, "magicTricks");
+  window.localStorage.setItem(14, "martialArts");
+  window.localStorage.setItem(15, "origami");
+  window.localStorage.setItem(16, "photography");
+  window.localStorage.setItem(17, "rubixCube");
+  window.localStorage.setItem(18, "suduko");
+  window.localStorage.setItem(19, "tableTennis");
+  window.localStorage.setItem(20, "woodworking");
+  
+    // console.log("clear attempt");
+    //   db.collection("users").doc(currentUser.id).update({
+    //           Archery: 0,
+    //           basketball: 0,
+    //           coincollecting: 0,
+    //           coding: 0,
+    //           gym: 0,
+    //           Kayak: 0,
+    //           crochet: 0,
+    //           magic: 0,
+    //           origami: 0,
+    //           rubixCube:0,
+    //           suduko: 0,
+    //           tableTennis: 0,
+    //           guitar: 0,
+    //           bouldering: 0,
+    //           martialArts: 0,
+    //           photography: 0,
+    //           boardGames: 0,
+    //           soccer: 0,
+    //           hiking: 0,
+    //           magicTricks: 0,
+    //           woodworking: 0,
+    //       }).then(()=>{
+    //         console.log("Hobbies have been set to 0")
+    //       })
+          
+      };
+  
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function randarray() {
+  let num = [];
+  let i = 0;
+  while (i < 4) {
+    let n = getRandomInt(19) + 1;
+    if (! nsame(n)) {
+      num.push(n);
+      i++;
+    }
+  }
+  function nsame(n) {
+    for (var i = 0; i < num.length; i++) {
+      if(n === num[i]) {
+        return true;
+      }
+    }
+    return false;
+  }
+  return num;
+}
+
+randarray();
+
+function changelim() {
+  buildHobbyPoints();
+  let array = randarray();
+  for(x = 0; x < 4; x++) {
+    let n = array[x];
+    console.log(n);
+    let hobon = localStorage.getItem(n);
+    resultsS(hobon);
+  }
+}
 
 function showleft() {
   let x = localStorage.length;
