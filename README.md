@@ -30,6 +30,9 @@ Content of the project folder:
 ├── login.html               # html for login page
 ├── main.html                # html for the page after logging in
 ├── result.html              # html for the results page after finishing the survey
+├── profile.html             # html for the user profile page
+├── feedback.html            # page users can leave a review 
+├── submitted.html           # page to bring closure to feedback
 come to url
 └── README.md
 
@@ -37,23 +40,38 @@ It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 
 ├── images                   # Folder for images
-    /Swordlogo.jpg           # App logo
-    /Archery.jpg             # Archery photo
-    /basketball.jpg          # basketball photo
-    /coincollecting.jpg      # coin collecting photo
-    /dancing.jpg             # dancing photo
-    /gym.jpg                 # gym photo
-    /Kayak.jpg               # kayaking photo
-    /knitting.jpg            # knitting photo
-    /magic.jpg               # magic the gathering photo
-    /origami.jpg             # origami photo
+    /Archery.jpg             # Archery image
+    /basketball.jpg          # basketball image
+    /boardgames.jpg          # boardgames image
+    /bouldering.jpg          # bouldering image
+    /coding.jpg              # coding image
+    /coincollecting.jpg      # coin collecting image
+    /crochet.jpg             # crochet image
+    /dancing.jpg             # dancing image
+    /guitar.jpg              # guitar image
+    /gym.jpg                 # gym image
+    /hiking.jpg              # hiking image
+    /Kayak.jpg               # kayaking image
+    /knitting.jpg            # knitting image
+    /magic.jpg               # magic the gathering image
+    /magicTricks.jpg         # magic tricks image
+    /martialArts.jpg         # martial arts image
+    /origami.jpg             # origami image
+    /photography.jpg         # photography image
     /rubix-cube.jpg          # rubix-cube photo
-    /suduko.jpg              # suduko photo
-    /table-tennis.jpg        # table-tennis photo 
+    /soccer.jpg              # soccer image - this assest is unused.
+    /suduko.jpg              # suduko image
+    /Swordlogo.jpg           # App logo
+    /table-tennis.jpg        # table-tennis image
+    /woodworking.jpg         # woodworking image
 
 ├── scripts                  # Folder for scripts
     /authentication.js       # JS file for authenticating users when they sign in.
+    /feedback.js             # JS file for the feedback html page.
     /main.js                 # scripts for read/write to DB for hobbies/Users and other collections
+    /profile.js              # JS file for the profile html page.
+    /questions.js            # JS file for the questions html pages.
+    /result.js               # JS file for the results html page.
     /skeleton.js             # for adding links to different pages
 
 ├── styles                   # Folder for styles
@@ -73,11 +91,11 @@ It has the following subfolders and files:
         /Q8.html             # eighth question
         /Q9.html             # ninth question
         /Q10.html            # tenth question
-        /Q11.html            # eleventh question
-        /Q12.html            # twelth question
+        /Q11.html            # eleventh question - This assest is unused.
+        /Q12.html            # twelth question - This assest is unused.
 
 Firebase hosting files: 
-├── .firebaserc...
+├── .firebaseAPI_BBY07.js
 
 
 ```
